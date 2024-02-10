@@ -64,7 +64,7 @@ async def get_thumb(videoid):
                     await f.write(await resp.read())
                     await f.close()
 
-        youtube = Image.open(f"cache/thumb{videoid}.png")
+        youtube = Image.open("https://telegra.ph//file/8be6504db5a889ef7f937.jpg")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(10))
